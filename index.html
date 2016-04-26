@@ -46,6 +46,9 @@
 <p><a href="http://travis-ci.org/jessesquires/DefaultStringConvertible"><img src="https://secure.travis-ci.org/jessesquires/DefaultStringConvertible.svg" alt="Build Status"></a> <a href="https://cocoapods.org/pods/DefaultStringConvertible"><img src="https://img.shields.io/cocoapods/v/DefaultStringConvertible.svg" alt="Version Status"></a> <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/cocoapods/l/DefaultStringConvertible.svg" alt="license MIT"></a> <a href="http://codecov.io/github/jessesquires/DefaultStringConvertible"><img src="https://img.shields.io/codecov/c/github/jessesquires/DefaultStringConvertible.svg" alt="codecov.io"></a> <a href="http://www.jessesquires.com/DefaultStringConvertible"><img src="https://img.shields.io/cocoapods/p/DefaultStringConvertible.svg" alt="Platform"></a> <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a></p>
 
 <p><em>A default <code>CustomStringConvertible</code> implementation for Swift types</em></p>
+<a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
+
+<p>Never implement <code>var description: String</code> again. Simply <code>import DefaultStringConvertible</code> and conform to <code>CustomStringConvertible</code> and get a default type description for free.</p>
 
 <blockquote>
 <p><strong>This micro-library is based on <a href="http://ericasadun.com/2016/04/18/default-reflection/">this post</a> from Erica Sadun.</strong></p>
@@ -56,7 +59,7 @@
 <li>Xcode 7.3+</li>
 <li>iOS 8.0+</li>
 <li>OSX 10.10+</li>
-<li>tvOS 9.1+</li>
+<li>tvOS 9.0+</li>
 <li>watchOS 2.0+</li>
 <li>Swift 2.2+</li>
 </ul>
@@ -78,6 +81,13 @@
 <p>Read the <a href="http://www.jessesquires.com/DefaultStringConvertible">docs</a>. Generated with <a href="https://github.com/realm/jazzy">jazzy</a>. Hosted by <a href="https://pages.github.com">GitHub Pages</a>. More information on the <a href="https://github.com/jessesquires/DefaultStringConvertible/tree/gh-pages"><code>gh-pages</code></a> branch.</p>
 <a href='#getting_started' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='getting_started'>Getting Started</h2>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">DefaultStringConvertible</span>
+
+<span class="kd">class</span> <span class="kt">MyClass</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="c1">// You *do not* need to implement `var description: String`</span>
+    <span class="c1">// by importing `DefaultStringConvertible`, you get a default `description` for free</span>
+<span class="p">}</span>
 </code></pre>
 <a href='#unit_tests' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='unit_tests'>Unit tests</h2>
 
