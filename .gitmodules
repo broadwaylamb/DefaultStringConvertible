@@ -1,0 +1,4 @@
+[submodule "DefaultStringConvertible"]
+	path = DefaultStringConvertible
+	url = https://github.com/jessesquires/DefaultStringConvertible.git
+	branch = develop
